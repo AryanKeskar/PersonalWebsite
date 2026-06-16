@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --background: #0B0F19;
-  --foreground: #F0F6FC;
+  --background: #FBFBFC;
+  --foreground: #1D1D1F;
 }
 
 body {
@@ -14,55 +14,54 @@ body {
   overflow-x: hidden;
 }
 
-/* Custom Scrollbar for professional feel */
+/* Custom Scrollbar for light theme */
 ::-webkit-scrollbar {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #0B0F19;
+  background: #FBFBFC;
 }
 ::-webkit-scrollbar-thumb {
-  background: #21262d;
+  background: #E5E5E7;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #30363d;
+  background: #D2D2D7;
 }
 
 /* Base style overrides */
 a {
-  transition: all 0.2s ease-in-out;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Ambient glow and pattern accents */
+/* Ambient light grid patterns */
 .bg-grid-pattern {
-  background-size: 40px 40px;
+  background-size: 50px 50px;
   background-image: 
-    linear-gradient(to right, rgba(240, 246, 252, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(240, 246, 252, 0.03) 1px, transparent 1px);
+    linear-gradient(to right, rgba(0, 0, 0, 0.015) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.015) 1px, transparent 1px);
 }
 
 .radial-fade {
-  mask-image: radial-gradient(ellipse at center, black, transparent 70%);
+  mask-image: radial-gradient(ellipse at center, black, transparent 75%);
 }
 
-.text-gradient-cyan {
-  background: linear-gradient(135deg, #22d3ee 0%, #06b6d4 100%);
+.text-gradient-charcoal {
+  background: linear-gradient(135deg, #1D1D1F 0%, #434346 50%, #6E6E73 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.text-gradient-emerald {
-  background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.shadow-apple {
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.02), 0 1px 2px rgba(0, 0, 0, 0.02);
 }
 
-.shadow-glow-cyan {
-  box-shadow: 0 0 30px rgba(34, 211, 238, 0.05);
+.shadow-apple-hover {
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.05), 0 2px 8px rgba(0, 0, 0, 0.02);
 }
 
-.shadow-glow-emerald {
-  box-shadow: 0 0 30px rgba(52, 211, 153, 0.05);
+.transition-all-custom {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
+
 

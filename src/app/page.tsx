@@ -51,32 +51,31 @@ const LinkedinIcon = (props: React.SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
-
 export default function Home() {
   return (
-    <div className="relative min-h-screen bg-[#0B0F19] text-[#F0F6FC] overflow-hidden">
+    <div className="relative min-h-screen bg-[#FBFBFC] text-[#1D1D1F] overflow-hidden">
       
-      {/* Dynamic Background Grids and Orbs for Depth */}
-      <div className="absolute inset-0 bg-grid-pattern opacity-40 pointer-events-none" />
-      <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-cyan-500/10 blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-[20%] right-[-10%] w-[50%] h-[50%] rounded-full bg-emerald-500/10 blur-[120px] pointer-events-none" />
+      {/* Light Mesh Overlay and Grid Lines */}
+      <div className="absolute inset-0 bg-grid-pattern opacity-60 pointer-events-none" />
+      <div className="absolute top-[-15%] left-[-10%] w-[60%] h-[60%] rounded-full bg-cyan-500/5 blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-[20%] right-[-10%] w-[60%] h-[60%] rounded-full bg-emerald-500/5 blur-[120px] pointer-events-none" />
 
       {/* Navigation Header */}
-      <header className="sticky top-0 z-50 w-full border-b border-[#30363d] bg-[#0B0F19]/80 backdrop-blur-md">
+      <header className="sticky top-0 z-50 w-full border-b border-[#E5E5E7] bg-white/70 backdrop-blur-md">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-          <a href="#" className="font-semibold text-lg tracking-tight hover:text-cyan-400" id="nav-brand">
+          <a href="#" className="font-semibold text-base tracking-tight text-[#1D1D1F] hover:text-[#007799] transition-colors" id="nav-brand">
             Aryan Milind Keskar
           </a>
-          <nav className="hidden md:flex items-center gap-8 text-sm text-[#8B949E]">
-            <a href="#focus" className="hover:text-[#F0F6FC] transition-colors" id="nav-link-focus">Core Focus</a>
-            <a href="#publications" className="hover:text-[#F0F6FC] transition-colors" id="nav-link-publications">Publications</a>
-            <a href="#projects" className="hover:text-[#F0F6FC] transition-colors" id="nav-link-projects">Projects</a>
-            <a href="#skills" className="hover:text-[#F0F6FC] transition-colors" id="nav-link-skills">Skills</a>
+          <nav className="hidden md:flex items-center gap-8 text-xs font-medium text-[#6E6E73]">
+            <a href="#focus" className="hover:text-[#1D1D1F] transition-colors" id="nav-link-focus">Focus Areas</a>
+            <a href="#publications" className="hover:text-[#1D1D1F] transition-colors" id="nav-link-publications">Publications</a>
+            <a href="#projects" className="hover:text-[#1D1D1F] transition-colors" id="nav-link-projects">Projects</a>
+            <a href="#skills" className="hover:text-[#1D1D1F] transition-colors" id="nav-link-skills">Skills</a>
           </nav>
           <div className="flex items-center gap-4">
             <a
               href="mailto:keskar.aryan@gmail.com"
-              className="px-4 py-1.5 rounded-full bg-[#161B22] border border-[#30363d] hover:border-cyan-400 text-xs font-medium hover:text-[#F0F6FC] transition-all duration-300"
+              className="px-4 py-2 rounded-full bg-[#1D1D1F] text-white hover:bg-[#323236] text-xs font-semibold shadow-sm transition-all duration-300"
               id="nav-contact-btn"
             >
               Get in Touch
@@ -85,100 +84,107 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Main Container */}
-      <main className="max-w-6xl mx-auto px-6 py-12 md:py-24 space-y-24 md:space-y-36 relative z-10">
-        
-        {/* HERO SECTION */}
-        <section className="space-y-8 max-w-4xl" id="hero">
-          <div className="space-y-4">
-            {/* Academic Honor Badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-semibold tracking-wide animate-pulse" id="hero-badge">
-              <Award className="w-3.5 h-3.5" />
-              <span>WACV 2025 Best Paper Award Winner</span>
+      {/* Hero & Focus Block (Off-white / White base) */}
+      <section className="relative py-16 md:py-28" id="hero">
+        <div className="max-w-6xl mx-auto px-6 space-y-12">
+          
+          <div className="space-y-6 max-w-4xl">
+            {/* WACV Award Badge */}
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-50 border border-cyan-200 text-[#007799] text-xs font-medium tracking-wide shadow-sm" id="hero-badge">
+              <Award className="w-3.5 h-3.5 text-[#007799]" />
+              <span>WACV 2025 Workshop Best Paper Award</span>
+            </div>
+
+            {/* Redesigned Elegant Typography Name Layout */}
+            <div className="space-y-2">
+              <span className="block text-xs font-semibold uppercase tracking-[0.25em] text-[#6E6E73] font-mono">
+                Portfolio & Curriculum
+              </span>
+              <h1 className="text-5xl sm:text-7xl font-bold tracking-tight text-gradient-charcoal leading-[1.05]" id="hero-title">
+                Aryan Milind Keskar
+              </h1>
             </div>
             
-            <h1 className="text-4xl sm:text-6xl font-bold tracking-tight text-[#F0F6FC]" id="hero-title">
-              Aryan Milind Keskar
-            </h1>
-            
-            <p className="text-lg sm:text-xl text-[#8B949E] leading-relaxed max-w-2xl font-light" id="hero-subtitle">
-              Incoming <span className="text-cyan-400 font-normal">MS CS Student at UC San Diego</span> <span className="text-[#30363d]">|</span> <span className="text-emerald-400 font-normal">AI Engineer at Appzoy</span>. Specializing in autonomous systems, perception alignment, and quantitative controls.
+            <p className="text-xl sm:text-2xl text-[#6E6E73] leading-relaxed max-w-3xl font-light" id="hero-subtitle">
+              Incoming <span className="text-[#007799] font-semibold">MS CS Student at UC San Diego</span> <span className="text-[#E5E5E7]">|</span> <span className="text-[#1D8F4F] font-semibold">AI Engineer at Appzoy</span>. Building state-of-the-art vision-language model alignments, agent patterns, and robust control loops.
             </p>
           </div>
 
-          {/* Social Links */}
-          <div className="flex flex-wrap items-center gap-4" id="hero-links">
+          {/* Social Links as clean, rounded pills */}
+          <div className="flex flex-wrap items-center gap-3" id="hero-links">
             <a
               href="https://github.com/AryanKeskar"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#161B22] border border-[#30363d] hover:border-cyan-500/50 hover:bg-[#1f242c] transition-all-custom"
+              className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-white border border-[#E5E5E7] hover:border-[#6E6E73] hover:shadow-apple shadow-sm transition-all-custom"
               id="link-github"
             >
-              <GithubIcon className="w-4 h-4 text-cyan-400" />
-              <span className="text-sm font-medium">GitHub</span>
-              <ArrowUpRight className="w-3 h-3 text-[#8B949E]" />
+              <GithubIcon className="w-4 h-4 text-[#1D1D1F]" />
+              <span className="text-xs font-semibold text-[#1D1D1F]">GitHub</span>
+              <ArrowUpRight className="w-3 h-3 text-[#6E6E73]" />
             </a>
             <a
               href="https://www.linkedin.com/in/aryan-keskar-616340202/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#161B22] border border-[#30363d] hover:border-emerald-500/50 hover:bg-[#1f242c] transition-all-custom"
+              className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-white border border-[#E5E5E7] hover:border-[#6E6E73] hover:shadow-apple shadow-sm transition-all-custom"
               id="link-linkedin"
             >
-              <LinkedinIcon className="w-4 h-4 text-emerald-400" />
-              <span className="text-sm font-medium">LinkedIn</span>
-              <ArrowUpRight className="w-3 h-3 text-[#8B949E]" />
+              <LinkedinIcon className="w-4 h-4 text-[#0077B5]" />
+              <span className="text-xs font-semibold text-[#1D1D1F]">LinkedIn</span>
+              <ArrowUpRight className="w-3 h-3 text-[#6E6E73]" />
             </a>
             <a
               href="mailto:keskar.aryan@gmail.com"
-              className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#161B22] border border-[#30363d] hover:border-cyan-500/50 hover:bg-[#1f242c] transition-all-custom"
+              className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-white border border-[#E5E5E7] hover:border-[#6E6E73] hover:shadow-apple shadow-sm transition-all-custom"
               id="link-email"
             >
-              <Mail className="w-4 h-4 text-cyan-400" />
-              <span className="text-sm font-medium">Email</span>
-              <ArrowUpRight className="w-3 h-3 text-[#8B949E]" />
+              <Mail className="w-4 h-4 text-[#007799]" />
+              <span className="text-xs font-semibold text-[#1D1D1F]">Email</span>
+              <ArrowUpRight className="w-3 h-3 text-[#6E6E73]" />
             </a>
           </div>
-        </section>
 
-        {/* CORE ENGINE GRID */}
-        <section className="space-y-8" id="focus">
-          <div className="space-y-2">
-            <h2 className="text-xs uppercase tracking-[0.2em] text-[#8B949E] font-semibold">Core Focus Areas</h2>
-            <p className="text-2xl font-bold tracking-tight">Technical Pillars</p>
+        </div>
+      </section>
+
+      {/* CORE FOCUS GRID SECTION */}
+      <section className="py-16 md:py-24 bg-[#F5F5F7] border-y border-[#E5E5E7]" id="focus">
+        <div className="max-w-6xl mx-auto px-6 space-y-12">
+          
+          <div className="space-y-2 text-center md:text-left">
+            <h2 className="text-xs uppercase tracking-[0.2em] text-[#6E6E73] font-semibold font-mono">Core Focus Areas</h2>
+            <p className="text-3xl font-bold tracking-tight text-[#1D1D1F]">Technical Pillars</p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6" id="focus-grid">
+          <div className="grid md:grid-cols-2 gap-8" id="focus-grid">
             
             {/* Box A: Perception & Agentic Systems */}
-            <div className="group relative rounded-xl bg-[#161B22] border border-[#30363d] p-8 shadow-glow-cyan transition-all duration-300 hover:border-cyan-500/40 hover:-translate-y-1 overflow-hidden" id="focus-box-a">
-              <div className="absolute top-0 right-0 w-24 h-24 bg-cyan-500/5 rounded-bl-full pointer-events-none group-hover:bg-cyan-500/10 transition-colors" />
-              
+            <div className="group relative rounded-[2rem] bg-white border border-[#E5E5E7] p-8 md:p-10 shadow-apple transition-all duration-300 hover:shadow-apple-hover hover:-translate-y-1 overflow-hidden" id="focus-box-a">
               <div className="flex items-center gap-4 mb-6">
-                <div className="p-3 rounded-lg bg-cyan-500/10 text-cyan-400">
+                <div className="p-3 rounded-2xl bg-cyan-50 text-[#007799]">
                   <Brain className="w-6 h-6" />
                 </div>
-                <h3 className="text-xl font-semibold text-[#F0F6FC] group-hover:text-cyan-300 transition-colors">Perception & Agentic Systems</h3>
+                <h3 className="text-xl font-bold text-[#1D1D1F] group-hover:text-[#007799] transition-colors">Perception & Agentic Systems</h3>
               </div>
               
-              <p className="text-[#8B949E] text-sm leading-relaxed mb-6">
+              <p className="text-[#6E6E73] text-sm leading-relaxed mb-6 font-light">
                 Developing state-of-the-art vision-language alignment methods, visual question answering architectures, and multi-agent systems engineered for robotic perception and safety.
               </p>
               
-              <div className="space-y-3">
-                <h4 className="text-xs font-semibold uppercase tracking-wider text-cyan-400/80">Key Work & Methodologies</h4>
-                <ul className="grid grid-cols-1 gap-2 text-xs text-[#8B949E]">
+              <div className="space-y-3 pt-2">
+                <h4 className="text-xs font-bold uppercase tracking-wider text-[#007799]">Key Work & Methodologies</h4>
+                <ul className="space-y-2.5 text-xs text-[#6E6E73]">
                   <li className="flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#007799]" />
                     <span>VILA quantization & evaluation</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#007799]" />
                     <span>LangGraph orchestration patterns</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#007799]" />
                     <span>Multi-agent autonomous hazard ranking</span>
                   </li>
                 </ul>
@@ -186,33 +192,31 @@ export default function Home() {
             </div>
 
             {/* Box B: Quantitative Systems & Control */}
-            <div className="group relative rounded-xl bg-[#161B22] border border-[#30363d] p-8 shadow-glow-emerald transition-all duration-300 hover:border-emerald-500/40 hover:-translate-y-1 overflow-hidden" id="focus-box-b">
-              <div className="absolute top-0 right-0 w-24 h-24 bg-emerald-500/5 rounded-bl-full pointer-events-none group-hover:bg-emerald-500/10 transition-colors" />
-              
+            <div className="group relative rounded-[2rem] bg-white border border-[#E5E5E7] p-8 md:p-10 shadow-apple transition-all duration-300 hover:shadow-apple-hover hover:-translate-y-1 overflow-hidden" id="focus-box-b">
               <div className="flex items-center gap-4 mb-6">
-                <div className="p-3 rounded-lg bg-emerald-500/10 text-emerald-400">
+                <div className="p-3 rounded-2xl bg-emerald-50 text-[#1D8F4F]">
                   <TrendingUp className="w-6 h-6" />
                 </div>
-                <h3 className="text-xl font-semibold text-[#F0F6FC] group-hover:text-emerald-300 transition-colors">Quantitative Systems & Control</h3>
+                <h3 className="text-xl font-bold text-[#1D1D1F] group-hover:text-[#1D8F4F] transition-colors">Quantitative Systems & Control</h3>
               </div>
               
-              <p className="text-[#8B949E] text-sm leading-relaxed mb-6">
+              <p className="text-[#6E6E73] text-sm leading-relaxed mb-6 font-light">
                 Applying control theory and quantitative strategies to optimize decision-making under uncertainty, modeling execution algorithms, and refining point-cloud spatial registration.
               </p>
               
-              <div className="space-y-3">
-                <h4 className="text-xs font-semibold uppercase tracking-wider text-emerald-400/80">Key Work & Methodologies</h4>
-                <ul className="grid grid-cols-1 gap-2 text-xs text-[#8B949E]">
+              <div className="space-y-3 pt-2">
+                <h4 className="text-xs font-bold uppercase tracking-wider text-[#1D8F4F]">Key Work & Methodologies</h4>
+                <ul className="space-y-2.5 text-xs text-[#6E6E73]">
                   <li className="flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#1D8F4F]" />
                     <span>Custom QR-DQN reinforcement learning</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#1D8F4F]" />
                     <span>Hawkes process LOB simulations</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#1D8F4F]" />
                     <span>Point-to-plane ICP spatial optimization</span>
                   </li>
                 </ul>
@@ -220,199 +224,208 @@ export default function Home() {
             </div>
 
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* PUBLICATIONS SECTION */}
-        <section className="space-y-8" id="publications">
+      {/* PUBLICATIONS SECTION (Soft Warm Beige Background) */}
+      <section className="py-16 md:py-24 bg-[#FAF9F6]" id="publications">
+        <div className="max-w-6xl mx-auto px-6 space-y-12">
+          
           <div className="space-y-2">
-            <h2 className="text-xs uppercase tracking-[0.2em] text-[#8B949E] font-semibold">Academic Contributions</h2>
-            <p className="text-2xl font-bold tracking-tight">Peer-Reviewed Publications</p>
+            <h2 className="text-xs uppercase tracking-[0.2em] text-[#6E6E73] font-semibold font-mono">Academic Contributions</h2>
+            <p className="text-3xl font-bold tracking-tight text-[#1D1D1F]">Publications</p>
           </div>
 
           <div className="space-y-6" id="publications-list">
             
             {/* Paper 1: WACV 2025 Best Paper */}
-            <div className="group relative rounded-xl bg-[#161B22] border border-[#30363d] p-6 hover:border-cyan-500/30 transition-all duration-300" id="paper-1">
-              <div className="flex flex-col md:flex-row md:items-start justify-between gap-4">
-                <div className="space-y-2">
+            <div className="group relative rounded-3xl bg-white border border-[#E5E5E7] p-6 md:p-8 shadow-apple hover:shadow-apple-hover transition-all duration-300" id="paper-1">
+              <div className="flex flex-col md:flex-row md:items-start justify-between gap-6">
+                <div className="space-y-3">
                   <div className="flex flex-wrap items-center gap-2">
-                    <span className="px-2 py-0.5 rounded bg-cyan-500/10 text-cyan-400 text-[10px] font-semibold border border-cyan-500/20">WACV 2025 Workshop</span>
-                    <span className="px-2 py-0.5 rounded bg-yellow-500/10 text-yellow-400 text-[10px] font-semibold border border-yellow-500/20 flex items-center gap-1">
-                      <Award className="w-3 h-3" /> Best Paper Award
+                    <span className="px-2.5 py-0.5 rounded-full bg-cyan-50 text-[#007799] text-[10px] font-semibold border border-cyan-150">WACV 2025 Workshop</span>
+                    <span className="px-2.5 py-0.5 rounded-full bg-amber-50 text-amber-800 text-[10px] font-semibold border border-amber-200 flex items-center gap-1 shadow-sm">
+                      <Award className="w-3 h-3 text-amber-600" /> Best Paper Award
                     </span>
                   </div>
-                  <h3 className="text-lg font-semibold text-[#F0F6FC] group-hover:text-cyan-300 transition-colors">
+                  <h3 className="text-lg font-bold text-[#1D1D1F] group-hover:text-[#007799] transition-colors leading-snug">
                     Evaluating Multimodal Vision-Language Model Prompting Strategies for Visual Question Answering
                   </h3>
-                  <p className="text-xs text-[#8B949E] font-mono">
-                    <span className="text-[#F0F6FC] underline decoration-cyan-500/30">Aryan Keskar</span>, et al.
+                  <p className="text-xs text-[#6E6E73] font-mono">
+                    <span className="text-[#1D1D1F] font-semibold underline decoration-[#007799]/30">Aryan Keskar</span>, et al.
                   </p>
                 </div>
                 <a
                   href="https://openaccess.thecvf.com/content/WACV2025W/LLVMAD/papers/Keskar_Evaluating_Multimodal_Vision-Language_Model_Prompting_Strategies_for_Visual_Question_Answering_WACVW_2025_paper.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-xs text-cyan-400 hover:text-cyan-300 font-medium whitespace-nowrap self-start md:self-center px-3 py-1.5 rounded-lg bg-[#0B0F19] border border-[#30363d] hover:border-cyan-500/40"
+                  className="inline-flex items-center gap-1.5 text-xs text-white bg-[#1D1D1F] hover:bg-[#323236] font-semibold whitespace-nowrap self-start md:self-center px-4 py-2 rounded-full shadow-sm transition-colors"
                   id="paper-1-link"
                 >
                   <FileText className="w-3.5 h-3.5" />
                   <span>PDF Document</span>
-                  <ExternalLink className="w-3 h-3" />
+                  <ExternalLink className="w-3 h-3 opacity-80" />
                 </a>
               </div>
             </div>
 
             {/* Paper 2: IEEE ITSC 2025 */}
-            <div className="group relative rounded-xl bg-[#161B22] border border-[#30363d] p-6 hover:border-emerald-500/30 transition-all duration-300" id="paper-2">
-              <div className="flex flex-col md:flex-row md:items-start justify-between gap-4">
-                <div className="space-y-2">
+            <div className="group relative rounded-3xl bg-white border border-[#E5E5E7] p-6 md:p-8 shadow-apple hover:shadow-apple-hover transition-all duration-300" id="paper-2">
+              <div className="flex flex-col md:flex-row md:items-start justify-between gap-6">
+                <div className="space-y-3">
                   <div className="flex flex-wrap items-center gap-2">
-                    <span className="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 text-[10px] font-semibold border border-emerald-500/20">IEEE ITSC 2025</span>
+                    <span className="px-2.5 py-0.5 rounded-full bg-emerald-50 text-[#1D8F4F] text-[10px] font-semibold border border-emerald-150">IEEE ITSC 2025</span>
                   </div>
-                  <h3 className="text-lg font-semibold text-[#F0F6FC] group-hover:text-emerald-300 transition-colors">
+                  <h3 className="text-lg font-bold text-[#1D1D1F] group-hover:text-[#1D8F4F] transition-colors leading-snug">
                     DoScenes: An Autonomous Driving Dataset with Natural Language Instruction for Human Interaction and Vision-Language Navigation
                   </h3>
-                  <p className="text-xs text-[#8B949E] font-mono">
-                    Parthib Roy, Srinivasa Perisetla, Shashank Shriram, Harsha Krishnaswamy, <span className="text-[#F0F6FC] underline decoration-emerald-500/30">Aryan Keskar</span>, Ross Greer
+                  <p className="text-xs text-[#6E6E73] font-mono">
+                    Parthib Roy, Srinivasa Perisetla, Shashank Shriram, Harsha Krishnaswamy, <span className="text-[#1D1D1F] font-semibold underline decoration-[#1D8F4F]/30">Aryan Keskar</span>, Ross Greer
                   </p>
                 </div>
                 <a
                   href="https://its.papercept.net/conferences/scripts/abstract.pl?ConfID=91&Number=1010"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-xs text-emerald-400 hover:text-emerald-300 font-medium whitespace-nowrap self-start md:self-center px-3 py-1.5 rounded-lg bg-[#0B0F19] border border-[#30363d] hover:border-emerald-500/40"
+                  className="inline-flex items-center gap-1.5 text-xs text-[#1D1D1F] bg-[#F5F5F7] hover:bg-[#E5E5E7] font-semibold whitespace-nowrap self-start md:self-center px-4 py-2 rounded-full transition-colors"
                   id="paper-2-link"
                 >
-                  <BookOpen className="w-3.5 h-3.5" />
+                  <BookOpen className="w-3.5 h-3.5 text-[#6E6E73]" />
                   <span>Abstract Link</span>
-                  <ExternalLink className="w-3 h-3" />
+                  <ExternalLink className="w-3 h-3 text-[#6E6E73]" />
                 </a>
               </div>
             </div>
 
             {/* Paper 3: IEEE CASE 2025 */}
-            <div className="group relative rounded-xl bg-[#161B22] border border-[#30363d] p-6 hover:border-cyan-500/30 transition-all duration-300" id="paper-3">
-              <div className="flex flex-col md:flex-row md:items-start justify-between gap-4">
-                <div className="space-y-2">
+            <div className="group relative rounded-3xl bg-white border border-[#E5E5E7] p-6 md:p-8 shadow-apple hover:shadow-apple-hover transition-all duration-300" id="paper-3">
+              <div className="flex flex-col md:flex-row md:items-start justify-between gap-6">
+                <div className="space-y-3">
                   <div className="flex flex-wrap items-center gap-2">
-                    <span className="px-2 py-0.5 rounded bg-cyan-500/10 text-cyan-400 text-[10px] font-semibold border border-cyan-500/20">IEEE CASE 2025</span>
+                    <span className="px-2.5 py-0.5 rounded-full bg-cyan-50 text-[#007799] text-[10px] font-semibold border border-cyan-150">IEEE CASE 2025</span>
                   </div>
-                  <h3 className="text-lg font-semibold text-[#F0F6FC] group-hover:text-cyan-300 transition-colors">
+                  <h3 className="text-lg font-bold text-[#1D1D1F] group-hover:text-[#007799] transition-colors leading-snug">
                     Towards a Multi-Agent Vision-Language System for Zero-Shot Novel Hazardous Object Detection for Autonomous Driving Safety
                   </h3>
-                  <p className="text-xs text-[#8B949E] font-mono">
-                    <span className="text-[#F0F6FC] underline decoration-cyan-500/30">Aryan Keskar</span>, et al.
+                  <p className="text-xs text-[#6E6E73] font-mono">
+                    <span className="text-[#1D1D1F] font-semibold underline decoration-[#007799]/30">Aryan Keskar</span>, et al.
                   </p>
                 </div>
                 <a
                   href="https://www.researchgate.net/publication/396033921_Towards_a_Multi-Agent_Vision-Language_System_for_Zero-Shot_Novel_Hazardous_Object_Detection_for_Autonomous_Driving_Safety"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-xs text-cyan-400 hover:text-cyan-300 font-medium whitespace-nowrap self-start md:self-center px-3 py-1.5 rounded-lg bg-[#0B0F19] border border-[#30363d] hover:border-cyan-500/40"
+                  className="inline-flex items-center gap-1.5 text-xs text-[#1D1D1F] bg-[#F5F5F7] hover:bg-[#E5E5E7] font-semibold whitespace-nowrap self-start md:self-center px-4 py-2 rounded-full transition-colors"
                   id="paper-3-link"
                 >
-                  <BookOpen className="w-3.5 h-3.5" />
+                  <BookOpen className="w-3.5 h-3.5 text-[#6E6E73]" />
                   <span>ResearchGate</span>
-                  <ExternalLink className="w-3 h-3" />
+                  <ExternalLink className="w-3 h-3 text-[#6E6E73]" />
                 </a>
               </div>
             </div>
 
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* PROJECTS MATRIX */}
-        <section className="space-y-8" id="projects">
+      {/* PROJECTS MATRIX */}
+      <section className="py-16 md:py-24 bg-[#FBFBFC]" id="projects">
+        <div className="max-w-6xl mx-auto px-6 space-y-12">
+          
           <div className="space-y-2">
-            <h2 className="text-xs uppercase tracking-[0.2em] text-[#8B949E] font-semibold">Selected Engineering</h2>
-            <p className="text-2xl font-bold tracking-tight">Technical Implementations</p>
+            <h2 className="text-xs uppercase tracking-[0.2em] text-[#6E6E73] font-semibold font-mono">Engineering Implementations</h2>
+            <p className="text-3xl font-bold tracking-tight text-[#1D1D1F]">Selected Projects</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6" id="projects-matrix">
             
             {/* Project 1 */}
-            <div className="group rounded-xl bg-[#161B22] border border-[#30363d] p-6 hover:border-cyan-500/30 transition-all duration-300 flex flex-col justify-between" id="project-card-1">
+            <div className="group rounded-[2rem] bg-white border border-[#E5E5E7] p-6 shadow-apple hover:shadow-apple-hover transition-all duration-300 flex flex-col justify-between" id="project-card-1">
               <div className="space-y-4">
-                <div className="p-2.5 rounded-lg bg-[#0B0F19] border border-[#30363d] w-fit text-cyan-400">
+                <div className="p-3 rounded-2xl bg-cyan-50 w-fit text-[#007799]">
                   <TrendingUp className="w-5 h-5" />
                 </div>
-                <h3 className="text-base font-semibold text-[#F0F6FC] group-hover:text-cyan-300 transition-colors">
+                <h3 className="text-base font-bold text-[#1D1D1F] group-hover:text-[#007799] transition-colors">
                   DRL Execution Algorithm
                 </h3>
-                <p className="text-[#8B949E] text-xs leading-relaxed">
+                <p className="text-[#6E6E73] text-xs leading-relaxed font-light">
                   Deep reinforcement learning policy using Quantile Regression DQN (QR-DQN) to minimize implementation shortfall, incorporating Hawkes Process intensity drift to model order book queues.
                 </p>
               </div>
-              <div className="mt-6 pt-4 border-t border-[#30363d] flex flex-wrap gap-1.5">
-                <span className="px-2 py-0.5 rounded bg-[#0B0F19] text-[#8B949E] text-[10px] font-mono border border-[#30363d]">QR-DQN</span>
-                <span className="px-2 py-0.5 rounded bg-[#0B0F19] text-[#8B949E] text-[10px] font-mono border border-[#30363d]">Hawkes Drift</span>
-                <span className="px-2 py-0.5 rounded bg-[#0B0F19] text-[#8B949E] text-[10px] font-mono border border-[#30363d]">PyTorch</span>
+              <div className="mt-6 pt-4 border-t border-[#E5E5E7] flex flex-wrap gap-1.5">
+                <span className="px-2.5 py-1 rounded-full bg-[#F5F5F7] text-[#6E6E73] text-[9px] font-mono">QR-DQN</span>
+                <span className="px-2.5 py-1 rounded-full bg-[#F5F5F7] text-[#6E6E73] text-[9px] font-mono">Hawkes Drift</span>
+                <span className="px-2.5 py-1 rounded-full bg-[#F5F5F7] text-[#6E6E73] text-[9px] font-mono">PyTorch</span>
               </div>
             </div>
 
             {/* Project 2 */}
-            <div className="group rounded-xl bg-[#161B22] border border-[#30363d] p-6 hover:border-emerald-500/30 transition-all duration-300 flex flex-col justify-between" id="project-card-2">
+            <div className="group rounded-[2rem] bg-white border border-[#E5E5E7] p-6 shadow-apple hover:shadow-apple-hover transition-all duration-300 flex flex-col justify-between" id="project-card-2">
               <div className="space-y-4">
-                <div className="p-2.5 rounded-lg bg-[#0B0F19] border border-[#30363d] w-fit text-emerald-400">
+                <div className="p-3 rounded-2xl bg-emerald-50 w-fit text-[#1D8F4F]">
                   <Brain className="w-5 h-5" />
                 </div>
-                <h3 className="text-base font-semibold text-[#F0F6FC] group-hover:text-emerald-300 transition-colors">
+                <h3 className="text-base font-bold text-[#1D1D1F] group-hover:text-[#1D8F4F] transition-colors">
                   Agentic Blood Test Parser
                 </h3>
-                <p className="text-[#8B949E] text-xs leading-relaxed">
+                <p className="text-[#6E6E73] text-xs leading-relaxed font-light">
                   LangGraph agent network that ingests native vision-language model structures to extract biochemical markers. Implemented state management using clean Pydantic schemas.
                 </p>
               </div>
-              <div className="mt-6 pt-4 border-t border-[#30363d] flex flex-wrap gap-1.5">
-                <span className="px-2 py-0.5 rounded bg-[#0B0F19] text-[#8B949E] text-[10px] font-mono border border-[#30363d]">LangGraph</span>
-                <span className="px-2 py-0.5 rounded bg-[#0B0F19] text-[#8B949E] text-[10px] font-mono border border-[#30363d]">Pydantic</span>
-                <span className="px-2 py-0.5 rounded bg-[#0B0F19] text-[#8B949E] text-[10px] font-mono border border-[#30363d]">VLMs</span>
+              <div className="mt-6 pt-4 border-t border-[#E5E5E7] flex flex-wrap gap-1.5">
+                <span className="px-2.5 py-1 rounded-full bg-[#F5F5F7] text-[#6E6E73] text-[9px] font-mono">LangGraph</span>
+                <span className="px-2.5 py-1 rounded-full bg-[#F5F5F7] text-[#6E6E73] text-[9px] font-mono">Pydantic</span>
+                <span className="px-2.5 py-1 rounded-full bg-[#F5F5F7] text-[#6E6E73] text-[9px] font-mono">VLMs</span>
               </div>
             </div>
 
             {/* Project 3 */}
-            <div className="group rounded-xl bg-[#161B22] border border-[#30363d] p-6 hover:border-cyan-500/30 transition-all duration-300 flex flex-col justify-between" id="project-card-3">
+            <div className="group rounded-[2rem] bg-white border border-[#E5E5E7] p-6 shadow-apple hover:shadow-apple-hover transition-all duration-300 flex flex-col justify-between" id="project-card-3">
               <div className="space-y-4">
-                <div className="p-2.5 rounded-lg bg-[#0B0F19] border border-[#30363d] w-fit text-cyan-400">
+                <div className="p-3 rounded-2xl bg-cyan-50 w-fit text-[#007799]">
                   <Cpu className="w-5 h-5" />
                 </div>
-                <h3 className="text-base font-semibold text-[#F0F6FC] group-hover:text-cyan-300 transition-colors">
+                <h3 className="text-base font-bold text-[#1D1D1F] group-hover:text-[#007799] transition-colors">
                   E&J Gallo Capstone
                 </h3>
-                <p className="text-[#8B949E] text-xs leading-relaxed">
+                <p className="text-[#6E6E73] text-xs leading-relaxed font-light">
                   Automated industrial alignment pipeline leveraging RANSAC circle-fitting, 3D point-cloud registration via Open3D (Point-to-Plane ICP), and PCA global alignment.
                 </p>
               </div>
-              <div className="mt-6 pt-4 border-t border-[#30363d] flex flex-wrap gap-1.5">
-                <span className="px-2 py-0.5 rounded bg-[#0B0F19] text-[#8B949E] text-[10px] font-mono border border-[#30363d]">Open3D</span>
-                <span className="px-2 py-0.5 rounded bg-[#0B0F19] text-[#8B949E] text-[10px] font-mono border border-[#30363d]">ICP</span>
-                <span className="px-2 py-0.5 rounded bg-[#0B0F19] text-[#8B949E] text-[10px] font-mono border border-[#30363d]">RANSAC</span>
+              <div className="mt-6 pt-4 border-t border-[#E5E5E7] flex flex-wrap gap-1.5">
+                <span className="px-2.5 py-1 rounded-full bg-[#F5F5F7] text-[#6E6E73] text-[9px] font-mono">Open3D</span>
+                <span className="px-2.5 py-1 rounded-full bg-[#F5F5F7] text-[#6E6E73] text-[9px] font-mono">ICP</span>
+                <span className="px-2.5 py-1 rounded-full bg-[#F5F5F7] text-[#6E6E73] text-[9px] font-mono">RANSAC</span>
               </div>
             </div>
 
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* SKILLS MATRIX */}
-        <section className="space-y-8" id="skills">
+      {/* SKILLS MATRIX (Soft Warm Beige Background) */}
+      <section className="py-16 md:py-24 bg-[#FAF9F6] border-t border-[#E5E5E7]" id="skills">
+        <div className="max-w-6xl mx-auto px-6 space-y-12">
+          
           <div className="space-y-2">
-            <h2 className="text-xs uppercase tracking-[0.2em] text-[#8B949E] font-semibold">Competencies</h2>
-            <p className="text-2xl font-bold tracking-tight">Professional Skills</p>
+            <h2 className="text-xs uppercase tracking-[0.2em] text-[#6E6E73] font-semibold font-mono">Competencies</h2>
+            <p className="text-3xl font-bold tracking-tight text-[#1D1D1F]">Professional Skills</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6" id="skills-matrix">
+          <div className="grid md:grid-cols-3 gap-8" id="skills-matrix">
             
             {/* Category 1: Languages */}
-            <div className="rounded-xl bg-[#161B22] border border-[#30363d] p-6 space-y-4" id="skill-cat-languages">
-              <div className="flex items-center gap-2 text-cyan-400">
+            <div className="rounded-3xl bg-white border border-[#E5E5E7] p-6 md:p-8 shadow-apple space-y-5" id="skill-cat-languages">
+              <div className="flex items-center gap-2 text-[#007799]">
                 <Code className="w-4 h-4" />
-                <h3 className="text-sm font-semibold tracking-wide uppercase">Languages</h3>
+                <h3 className="text-xs font-bold tracking-wider uppercase font-mono">Languages</h3>
               </div>
               <div className="flex flex-wrap gap-2">
                 {["Python", "C++", "Java", "TypeScript", "SQL", "HTML/CSS"].map((skill) => (
                   <span
                     key={skill}
-                    className="px-2.5 py-1 rounded bg-[#0B0F19] text-[#F0F6FC] text-xs font-mono border border-[#30363d] hover:border-cyan-500/50 transition-colors"
+                    className="px-3 py-1 rounded-full bg-[#F5F5F7] text-[#1D1D1F] text-xs font-mono border border-[#E5E5E7] hover:border-[#6E6E73] transition-colors"
                   >
                     {skill}
                   </span>
@@ -421,16 +434,16 @@ export default function Home() {
             </div>
 
             {/* Category 2: AI / ML */}
-            <div className="rounded-xl bg-[#161B22] border border-[#30363d] p-6 space-y-4" id="skill-cat-ai">
-              <div className="flex items-center gap-2 text-emerald-400">
+            <div className="rounded-3xl bg-white border border-[#E5E5E7] p-6 md:p-8 shadow-apple space-y-5" id="skill-cat-ai">
+              <div className="flex items-center gap-2 text-[#1D8F4F]">
                 <Cpu className="w-4 h-4" />
-                <h3 className="text-sm font-semibold tracking-wide uppercase">AI / ML</h3>
+                <h3 className="text-xs font-bold tracking-wider uppercase font-mono">AI / ML</h3>
               </div>
               <div className="flex flex-wrap gap-2">
                 {["PyTorch", "LangGraph", "VLMs (VILA)", "QR-DQN", "OpenCV", "Hugging Face"].map((skill) => (
                   <span
                     key={skill}
-                    className="px-2.5 py-1 rounded bg-[#0B0F19] text-[#F0F6FC] text-xs font-mono border border-[#30363d] hover:border-emerald-500/50 transition-colors"
+                    className="px-3 py-1 rounded-full bg-[#F5F5F7] text-[#1D1D1F] text-xs font-mono border border-[#E5E5E7] hover:border-[#6E6E73] transition-colors"
                   >
                     {skill}
                   </span>
@@ -439,16 +452,16 @@ export default function Home() {
             </div>
 
             {/* Category 3: Systems & Tools */}
-            <div className="rounded-xl bg-[#161B22] border border-[#30363d] p-6 space-y-4" id="skill-cat-systems">
-              <div className="flex items-center gap-2 text-cyan-400">
+            <div className="rounded-3xl bg-white border border-[#E5E5E7] p-6 md:p-8 shadow-apple space-y-5" id="skill-cat-systems">
+              <div className="flex items-center gap-2 text-[#007799]">
                 <Database className="w-4 h-4" />
-                <h3 className="text-sm font-semibold tracking-wide uppercase">Systems & Tools</h3>
+                <h3 className="text-xs font-bold tracking-wider uppercase font-mono">Systems & Tools</h3>
               </div>
               <div className="flex flex-wrap gap-2">
                 {["Git", "Open3D", "Docker", "Linux", "ROS", "Next.js / React"].map((skill) => (
                   <span
                     key={skill}
-                    className="px-2.5 py-1 rounded bg-[#0B0F19] text-[#F0F6FC] text-xs font-mono border border-[#30363d] hover:border-cyan-500/50 transition-colors"
+                    className="px-3 py-1 rounded-full bg-[#F5F5F7] text-[#1D1D1F] text-xs font-mono border border-[#E5E5E7] hover:border-[#6E6E73] transition-colors"
                   >
                     {skill}
                   </span>
@@ -457,20 +470,19 @@ export default function Home() {
             </div>
 
           </div>
-        </section>
-
-      </main>
+        </div>
+      </section>
 
       {/* Footer */}
-      <footer className="border-t border-[#30363d] bg-[#0B0F19] mt-24">
-        <div className="max-w-6xl mx-auto px-6 py-12 flex flex-col sm:flex-row items-center justify-between gap-6 text-[#8B949E] text-xs">
-          <p id="footer-text">
-            © {new Date().getFullYear()} Aryan Milind Keskar. All rights reserved.
+      <footer className="border-t border-[#E5E5E7] bg-white">
+        <div className="max-w-6xl mx-auto px-6 py-12 flex flex-col sm:flex-row items-center justify-between gap-6 text-[#6E6E73] text-xs">
+          <p id="footer-text" className="font-light">
+            © {new Date().getFullYear()} Aryan Milind Keskar. All rights reserved. Designed in California.
           </p>
-          <div className="flex gap-6">
-            <a href="https://github.com/AryanKeskar" className="hover:text-[#F0F6FC]" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="https://www.linkedin.com/in/aryan-keskar-616340202/" className="hover:text-[#F0F6FC]" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a href="mailto:keskar.aryan@gmail.com" className="hover:text-[#F0F6FC]">Email</a>
+          <div className="flex gap-6 font-medium">
+            <a href="https://github.com/AryanKeskar" className="hover:text-[#1D1D1F]" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/aryan-keskar-616340202/" className="hover:text-[#1D1D1F]" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="mailto:keskar.aryan@gmail.com" className="hover:text-[#1D1D1F]">Email</a>
           </div>
         </div>
       </footer>

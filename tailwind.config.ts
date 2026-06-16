@@ -16,7 +16,8 @@ const config: Config = {
         textMuted: "#6E6E73", // Apple slate gray
         accentCyan: "#008299", // Deep teal blue
         accentEmerald: "#1D8F4F", // Forest emerald
-        borderMuted: "#DCE4E8", // Light watery gray border
+        borderMuted: "#DCE4E8",// Light watery gray border
+
       },
       fontFamily: {
         sans: ["var(--font-sans)", "ui-sans-serif", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "sans-serif"],

@@ -138,27 +138,27 @@ export default function Home() {
       <section className="relative min-h-[85vh] flex items-center z-10 pt-20 pb-16" id="hero">
         <div className="max-w-6xl mx-auto px-6 w-full">
           
-          {/* Floating Frosted Glass Info Box for Text Contrast */}
-          <div className="max-w-3xl bg-white/45 backdrop-blur-sm border border-white/30 rounded-[2rem] p-8 md:p-12 shadow-sm space-y-6">
+          {/* Floating Frosted Glass Info Box for Text Contrast (Narrower and Shorter) */}
+          <div className="max-w-xl bg-white/45 backdrop-blur-sm border border-white/30 rounded-[2rem] p-6 md:p-8 shadow-sm space-y-4">
             
             {/* WACV Award Badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-50/80 border border-cyan-150 text-[#008299] text-[10px] font-semibold tracking-wide uppercase shadow-sm" id="hero-badge">
-              <Award className="w-3.5 h-3.5 text-[#008299]" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-50/80 border border-cyan-150 text-[#008299] text-[9px] font-semibold tracking-wide uppercase shadow-sm" id="hero-badge">
+              <Award className="w-3 h-3 text-[#008299]" />
               <span>WACV 2025 Workshop Best Paper Award</span>
             </div>
 
             {/* Reduced Name Font Size (Elegant, Minimalist, Apple-like) */}
-            <div className="space-y-1">
-              <span className="block text-[10px] font-semibold uppercase tracking-[0.25em] text-[#6E6E73] font-mono">
+            <div className="space-y-0.5">
+              <span className="block text-[9px] font-semibold uppercase tracking-[0.25em] text-[#6E6E73] font-mono">
                 Academic Profile
               </span>
-              <h1 className="text-3xl sm:text-5xl font-semibold tracking-tight text-[#1D1D1F]" id="hero-title">
+              <h1 className="text-2xl sm:text-3xl font-semibold tracking-tight text-[#1D1D1F]" id="hero-title">
                 Aryan Milind Keskar
               </h1>
             </div>
             
             {/* Personal Introduction Paragraph (Title-free About Me, replacing old subtitle) */}
-            <p className="text-sm sm:text-base text-[#434346] leading-relaxed font-light" id="hero-intro-text">
+            <p className="text-xs sm:text-sm text-[#434346] leading-relaxed font-light" id="hero-intro-text">
               I am an incoming MS CS student at UC San Diego and an AI Engineer at Appzoy. Specializing in autonomous systems, perception alignment, and quantitative controls, I design vision-language model alignments, agent frameworks, and robust decision-making loops. Driven by a passion for robotic safety and quantitative execution, I focus on engineering intelligent systems that can perceive their environment and act reliably in real-world scenarios.
             </p>
 

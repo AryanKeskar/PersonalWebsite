@@ -80,25 +80,25 @@ export default function Home() {
 
   return (
     <div className="relative min-h-screen bg-[#F2F6F8] text-[#1D1D1F] overflow-x-hidden">
-      
+
       {/* SCROLL-DRIVEN BACKGROUND TRANSITION (Z-0 FIXED BACKDROP) */}
       <div className="fixed inset-0 z-0 pointer-events-none">
-        
+
         {/* Ocean Background Layer (Base Layer: fades out as user scrolls) */}
-        <div 
-          className="absolute inset-0 bg-cover bg-top bg-no-repeat transition-opacity duration-100 ease-out" 
-          style={{ 
+        <div
+          className="absolute inset-0 bg-cover bg-top bg-no-repeat transition-opacity duration-100 ease-out"
+          style={{
             backgroundImage: "url('/ocean.jpeg')",
-            opacity: 1 - scrollRatio 
+            opacity: 1 - scrollRatio
           }}
         />
 
         {/* Waterfall Background Layer (Overlay Layer: fades in as user scrolls) */}
-        <div 
-          className="absolute inset-0 bg-cover bg-top bg-no-repeat transition-opacity duration-100 ease-out" 
-          style={{ 
+        <div
+          className="absolute inset-0 bg-cover bg-top bg-no-repeat transition-opacity duration-100 ease-out"
+          style={{
             backgroundImage: "url('/waterfall.jpeg')",
-            opacity: scrollRatio 
+            opacity: scrollRatio
           }}
         />
 
@@ -117,7 +117,7 @@ export default function Home() {
             Aryan Milind Keskar
           </a>
           <nav className="hidden md:flex items-center gap-8 text-xs font-medium text-[#6E6E73]">
-            <a href="#focus" className="hover:text-[#1D1D1F] transition-colors">Focus Areas</a>
+            <a href="#education" className="hover:text-[#1D1D1F] transition-colors">Education</a>
             <a href="#publications" className="hover:text-[#1D1D1F] transition-colors">Publications</a>
             <a href="#projects" className="hover:text-[#1D1D1F] transition-colors">Projects</a>
             <a href="#skills" className="hover:text-[#1D1D1F] transition-colors">Skills</a>
@@ -137,10 +137,10 @@ export default function Home() {
       {/* HERO SECTION (Fully Transparent & Clear Background to let image show through) */}
       <section className="relative min-h-[85vh] flex items-end z-10 pt-24 pb-10 sm:pb-14" id="hero">
         <div className="w-full pl-0 pr-6">
-          
+
           {/* Floating Frosted Glass Info Box for Text Contrast (Narrower and Shorter) */}
           <div className="max-w-xl bg-white/45 backdrop-blur-sm border border-white/30 rounded-[2rem] p-6 md:p-8 shadow-sm space-y-4">
-            
+
             {/* WACV Award Badge */}
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-50/80 border border-cyan-150 text-[#008299] text-[9px] font-semibold tracking-wide uppercase shadow-sm" id="hero-badge">
               <Award className="w-3 h-3 text-[#008299]" />
@@ -156,10 +156,10 @@ export default function Home() {
                 Aryan Milind Keskar
               </h1>
             </div>
-            
+
             {/* Personal Introduction Paragraph (Title-free About Me, replacing old subtitle) */}
             <p className="text-xs sm:text-sm text-[#434346] leading-relaxed font-light" id="hero-intro-text">
-              I am an incoming MS CS student at UC San Diego and an AI Engineer at Appzoy. Specializing in autonomous systems, perception alignment, and quantitative controls, I design vision-language model alignments, agent frameworks, and robust decision-making loops. Driven by a passion for robotic safety and quantitative execution, I focus on engineering intelligent systems that can perceive their environment and act reliably in real-world scenarios.
+              I am an incoming Computer Science Master&apos;s student at UC San Diego and an AI Engineering Intern at Appzoy. I focus on building intelligent, reliable systems at the intersection of machine learning, computer vision, and decision-making algorithms. I am driven by a passion for solving complex, real-world engineering problems, whether that involves improving autonomous perception or developing robust software solutions. I build applications from first principles and love exploring how intelligent agents can safely and effectively navigate dynamic environments.
             </p>
 
             {/* Social Links as clean, rounded light pills */}
@@ -206,77 +206,67 @@ export default function Home() {
       <div className="relative z-10 bg-white/50 backdrop-blur-xl border-t border-white/40 shadow-2xl rounded-t-[3.5rem] mt-[-5vh]">
         <div className="max-w-6xl mx-auto px-6 py-20 space-y-28 md:space-y-36">
 
-          {/* CORE FOCUS GRID SECTION */}
-          <section className="space-y-10 scroll-mt-24" id="focus">
-            
+          {/* EDUCATION SECTION */}
+          <section className="space-y-10 scroll-mt-24" id="education">
+
             <div className="space-y-2">
-              <h2 className="text-xs uppercase tracking-[0.2em] text-[#6E6E73] font-semibold font-mono">Core Focus Areas</h2>
-              <p className="text-2xl font-bold tracking-tight text-[#1D1D1F]">Technical Pillars</p>
+              <h2 className="text-xs uppercase tracking-[0.2em] text-[#6E6E73] font-semibold font-mono">Academic Journey</h2>
+              <p className="text-2xl font-bold tracking-tight text-[#1D1D1F]">Education</p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8" id="focus-grid">
+            <div className="grid md:grid-cols-3 gap-8 relative" id="education-timeline">
               
-              {/* Box A: Perception & Agentic Systems */}
-              <div className="group relative rounded-[2rem] bg-white/70 backdrop-blur-md border border-white/50 p-8 md:p-10 shadow-apple transition-all duration-300 hover:shadow-apple-hover hover:-translate-y-1 overflow-hidden" id="focus-box-a">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="p-3 rounded-2xl bg-cyan-50 text-[#008299]">
-                    <Brain className="w-6 h-6" />
+              {/* Card 1: Homestead High School */}
+              <div className="group relative rounded-[2rem] bg-white/70 backdrop-blur-md border border-white/50 p-8 shadow-apple hover:shadow-apple-hover transition-all duration-300 flex flex-col justify-between overflow-hidden" id="edu-card-1">
+                <div className="space-y-4">
+                  <div className="flex justify-between items-start">
+                    <span className="text-[10px] uppercase font-semibold font-mono tracking-wider text-[#6E6E73] bg-[#EBF1F4] px-2.5 py-1 rounded-full border border-white/50">
+                      Primary
+                    </span>
                   </div>
-                  <h3 className="text-lg font-bold text-[#1D1D1F] group-hover:text-[#008299] transition-colors">Perception & Agentic Systems</h3>
+                  <div>
+                    <h3 className="text-lg font-bold text-[#1D1D1F]">Homestead High School</h3>
+                    <p className="text-[#6E6E73] text-xs font-light mt-1">Secondary Education</p>
+                  </div>
                 </div>
-                
-                <p className="text-[#6E6E73] text-sm leading-relaxed mb-6 font-light">
-                  Developing state-of-the-art vision-language alignment methods, visual question answering architectures, and multi-agent systems engineered for robotic perception and safety.
-                </p>
-                
-                <div className="space-y-3 pt-2">
-                  <h4 className="text-xs font-bold uppercase tracking-wider text-[#008299]">Key Work & Methodologies</h4>
-                  <ul className="space-y-2.5 text-xs text-[#6E6E73]">
-                    <li className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#008299]" />
-                      <span>VILA quantization & evaluation</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#008299]" />
-                      <span>LangGraph orchestration patterns</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#008299]" />
-                      <span>Multi-agent autonomous hazard ranking</span>
-                    </li>
-                  </ul>
+                <div className="mt-8 pt-4 border-t border-[#DCE4E8] flex justify-between items-center text-xs text-[#6E6E73]">
+                  <span>High School Diploma</span>
                 </div>
               </div>
 
-              {/* Box B: Quantitative Systems & Control */}
-              <div className="group relative rounded-[2rem] bg-white/70 backdrop-blur-md border border-white/50 p-8 md:p-10 shadow-apple transition-all duration-300 hover:shadow-apple-hover hover:-translate-y-1 overflow-hidden" id="focus-box-b">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="p-3 rounded-2xl bg-emerald-50 text-[#1D8F4F]">
-                    <TrendingUp className="w-6 h-6" />
+              {/* Card 2: UC Merced */}
+              <div className="group relative rounded-[2rem] bg-white/70 backdrop-blur-md border border-white/50 p-8 shadow-apple hover:shadow-apple-hover transition-all duration-300 flex flex-col justify-between overflow-hidden" id="edu-card-2">
+                <div className="space-y-4">
+                  <div className="flex justify-between items-start">
+                    <span className="text-[10px] uppercase font-semibold font-mono tracking-wider text-[#008299] bg-cyan-50/80 px-2.5 py-1 rounded-full border border-cyan-100">
+                      Undergraduate
+                    </span>
                   </div>
-                  <h3 className="text-lg font-bold text-[#1D1D1F] group-hover:text-[#1D8F4F] transition-colors">Quantitative Systems & Control</h3>
+                  <div>
+                    <h3 className="text-lg font-bold text-[#1D1D1F]">UC Merced</h3>
+                    <p className="text-[#6E6E73] text-xs font-light mt-1">B.S. Computer Science & Engineering (CSE)</p>
+                  </div>
                 </div>
-                
-                <p className="text-[#6E6E73] text-sm leading-relaxed mb-6 font-light">
-                  Applying control theory and quantitative strategies to optimize decision-making under uncertainty, modeling execution algorithms, and refining point-cloud spatial registration.
-                </p>
-                
-                <div className="space-y-3 pt-2">
-                  <h4 className="text-xs font-bold uppercase tracking-wider text-[#1D8F4F]">Key Work & Methodologies</h4>
-                  <ul className="space-y-2.5 text-xs text-[#6E6E73]">
-                    <li className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#1D8F4F]" />
-                      <span>Custom QR-DQN reinforcement learning</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#1D8F4F]" />
-                      <span>Hawkes process LOB simulations</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#1D8F4F]" />
-                      <span>Point-to-plane ICP spatial optimization</span>
-                    </li>
-                  </ul>
+                <div className="mt-8 pt-4 border-t border-[#DCE4E8] flex justify-between items-center text-xs text-[#6E6E73]">
+                  <span>CSE Undergrad Studies</span>
+                </div>
+              </div>
+
+              {/* Card 3: UC San Diego */}
+              <div className="group relative rounded-[2rem] bg-white/70 backdrop-blur-md border border-white/50 p-8 shadow-apple hover:shadow-apple-hover transition-all duration-300 flex flex-col justify-between overflow-hidden" id="edu-card-3">
+                <div className="space-y-4">
+                  <div className="flex justify-between items-start">
+                    <span className="text-[10px] uppercase font-semibold font-mono tracking-wider text-[#1D8F4F] bg-emerald-50/80 px-2.5 py-1 rounded-full border border-emerald-100 animate-pulse">
+                      Graduate (Incoming)
+                    </span>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-[#1D1D1F]">UC San Diego</h3>
+                    <p className="text-[#6E6E73] text-xs font-light mt-1">M.S. Computer Science & Engineering (CSE)</p>
+                  </div>
+                </div>
+                <div className="mt-8 pt-4 border-t border-[#DCE4E8] flex justify-between items-center text-xs text-[#6E6E73]">
+                  <span>MSCSE Graduate Studies</span>
                 </div>
               </div>
 
@@ -285,14 +275,14 @@ export default function Home() {
 
           {/* PUBLICATIONS SECTION */}
           <section className="space-y-10 scroll-mt-24" id="publications">
-            
+
             <div className="space-y-2">
               <h2 className="text-xs uppercase tracking-[0.2em] text-[#6E6E73] font-semibold font-mono">Academic Contributions</h2>
               <p className="text-2xl font-bold tracking-tight text-[#1D1D1F]">Publications</p>
             </div>
 
             <div className="space-y-6" id="publications-list">
-              
+
               {/* Paper 1 */}
               <div className="group relative rounded-3xl bg-white/70 backdrop-blur-md border border-white/50 p-6 md:p-8 shadow-apple hover:shadow-apple-hover transition-all duration-300" id="paper-1">
                 <div className="flex flex-col md:flex-row md:items-start justify-between gap-6">
@@ -385,14 +375,14 @@ export default function Home() {
 
           {/* PROJECTS MATRIX */}
           <section className="space-y-10 scroll-mt-24" id="projects">
-            
+
             <div className="space-y-2">
               <h2 className="text-xs uppercase tracking-[0.2em] text-[#6E6E73] font-semibold font-mono">Engineering Implementations</h2>
               <p className="text-2xl font-bold tracking-tight text-[#1D1D1F]">Selected Projects</p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-6" id="projects-matrix">
-              
+
               {/* Project 1 */}
               <div className="group rounded-[2rem] bg-white/70 backdrop-blur-md border border-white/50 p-6 shadow-apple hover:shadow-apple-hover transition-all duration-300 flex flex-col justify-between" id="project-card-1">
                 <div className="space-y-4">
@@ -458,14 +448,14 @@ export default function Home() {
 
           {/* SKILLS SECTION */}
           <section className="space-y-10 scroll-mt-24" id="skills">
-            
+
             <div className="space-y-2">
               <h2 className="text-xs uppercase tracking-[0.2em] text-[#6E6E73] font-semibold font-mono">Competencies</h2>
               <p className="text-2xl font-bold tracking-tight text-[#1D1D1F]">Professional Skills</p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-8" id="skills-matrix">
-              
+
               {/* Category 1: Languages */}
               <div className="rounded-3xl bg-white/70 backdrop-blur-md border border-white/50 p-6 md:p-8 shadow-apple space-y-5" id="skill-cat-languages">
                 <div className="flex items-center gap-2 text-[#008299]">

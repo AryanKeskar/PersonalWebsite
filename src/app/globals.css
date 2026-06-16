@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0B0F19;
+  --foreground: #F0F6FC;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar for professional feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0B0F19;
+}
+::-webkit-scrollbar-thumb {
+  background: #21262d;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #30363d;
+}
+
+/* Base style overrides */
+a {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Ambient glow and pattern accents */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(240, 246, 252, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(240, 246, 252, 0.03) 1px, transparent 1px);
+}
+
+.radial-fade {
+  mask-image: radial-gradient(ellipse at center, black, transparent 70%);
+}
+
+.text-gradient-cyan {
+  background: linear-gradient(135deg, #22d3ee 0%, #06b6d4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-emerald {
+  background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.shadow-glow-cyan {
+  box-shadow: 0 0 30px rgba(34, 211, 238, 0.05);
+}
+
+.shadow-glow-emerald {
+  box-shadow: 0 0 30px rgba(52, 211, 153, 0.05);
+}
+

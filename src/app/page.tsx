@@ -86,7 +86,7 @@ export default function Home() {
         
         {/* Ocean Background Layer (Base Layer: fades out as user scrolls) */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-100 ease-out" 
+          className="absolute inset-0 bg-cover bg-top bg-no-repeat transition-opacity duration-100 ease-out" 
           style={{ 
             backgroundImage: "url('/ocean.jpeg')",
             opacity: 1 - scrollRatio 
@@ -95,7 +95,7 @@ export default function Home() {
 
         {/* Waterfall Background Layer (Overlay Layer: fades in as user scrolls) */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-100 ease-out" 
+          className="absolute inset-0 bg-cover bg-top bg-no-repeat transition-opacity duration-100 ease-out" 
           style={{ 
             backgroundImage: "url('/waterfall.jpeg')",
             opacity: scrollRatio 

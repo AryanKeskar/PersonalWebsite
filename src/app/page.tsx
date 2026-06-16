@@ -135,8 +135,8 @@ export default function Home() {
       </header>
 
       {/* HERO SECTION (Fully Transparent & Clear Background to let image show through) */}
-      <section className="relative min-h-[85vh] flex items-end z-10 pt-24 pb-4 sm:pb-6" id="hero">
-        <div className="w-full px-6 md:px-12 lg:px-16">
+      <section className="relative min-h-[85vh] flex items-end z-10 pt-24 pb-10 sm:pb-14" id="hero">
+        <div className="w-full pl-0 pr-6">
           
           {/* Floating Frosted Glass Info Box for Text Contrast (Narrower and Shorter) */}
           <div className="max-w-xl bg-white/45 backdrop-blur-sm border border-white/30 rounded-[2rem] p-6 md:p-8 shadow-sm space-y-4">

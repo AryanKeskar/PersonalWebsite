@@ -206,70 +206,62 @@ export default function Home() {
       <div className="relative z-10 bg-white/50 backdrop-blur-xl border-t border-white/40 shadow-2xl rounded-t-[3.5rem] mt-[-5vh]">
         <div className="max-w-6xl mx-auto px-6 py-20 space-y-28 md:space-y-36">
 
-          {/* EDUCATION SECTION */}
-          <section className="space-y-10 scroll-mt-24" id="education">
+          {/* EDUCATION SECTION (Sleek Horizontal Bar) */}
+          <section className="space-y-6 scroll-mt-24" id="education">
 
-            <div className="space-y-2">
-              <h2 className="text-xs uppercase tracking-[0.2em] text-[#6E6E73] font-semibold font-mono">Academic Journey</h2>
-              <p className="text-2xl font-bold tracking-tight text-[#1D1D1F]">Education</p>
+            <div className="space-y-1">
+              <h2 className="text-[10px] uppercase tracking-[0.2em] text-[#6E6E73] font-semibold font-mono">Academic Journey</h2>
+              <p className="text-xl font-bold tracking-tight text-[#1D1D1F]">Education</p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8 relative" id="education-timeline">
-              
-              {/* Card 1: Homestead High School */}
-              <div className="group relative rounded-[2rem] bg-white/70 backdrop-blur-md border border-white/50 p-8 shadow-apple hover:shadow-apple-hover transition-all duration-300 flex flex-col justify-between overflow-hidden" id="edu-card-1">
-                <div className="space-y-4">
-                  <div className="flex justify-between items-start">
-                    <span className="text-[10px] uppercase font-semibold font-mono tracking-wider text-[#6E6E73] bg-[#EBF1F4] px-2.5 py-1 rounded-full border border-white/50">
-                      Primary
-                    </span>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-[#1D1D1F]">Homestead High School</h3>
-                    <p className="text-[#6E6E73] text-xs font-light mt-1">Secondary Education</p>
-                  </div>
+            <div className="rounded-[1.5rem] bg-white/70 backdrop-blur-md border border-white/50 p-6 md:p-8 shadow-apple" id="education-timeline-sleek">
+              <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 md:gap-4 relative">
+                
+                {/* Milestone 1 */}
+                <div className="flex-1 space-y-1">
+                  <span className="text-[9px] uppercase font-semibold font-mono tracking-wider text-[#6E6E73] bg-[#EBF1F4] px-2 py-0.5 rounded-full border border-white/40">
+                    Primary
+                  </span>
+                  <h3 className="text-sm font-bold text-[#1D1D1F] mt-1.5">Homestead High School</h3>
+                  <p className="text-[#6E6E73] text-xs font-light">High School Diploma</p>
                 </div>
-                <div className="mt-8 pt-4 border-t border-[#DCE4E8] flex justify-between items-center text-xs text-[#6E6E73]">
-                  <span>High School Diploma</span>
-                </div>
-              </div>
 
-              {/* Card 2: UC Merced */}
-              <div className="group relative rounded-[2rem] bg-white/70 backdrop-blur-md border border-white/50 p-8 shadow-apple hover:shadow-apple-hover transition-all duration-300 flex flex-col justify-between overflow-hidden" id="edu-card-2">
-                <div className="space-y-4">
-                  <div className="flex justify-between items-start">
-                    <span className="text-[10px] uppercase font-semibold font-mono tracking-wider text-[#008299] bg-cyan-50/80 px-2.5 py-1 rounded-full border border-cyan-100">
-                      Undergraduate
-                    </span>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-[#1D1D1F]">UC Merced</h3>
-                    <p className="text-[#6E6E73] text-xs font-light mt-1">B.S. Computer Science & Engineering (CSE)</p>
-                  </div>
+                {/* Chevron separator (desktop only) */}
+                <div className="hidden md:block text-[#DCE4E8] flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"/></svg>
                 </div>
-                <div className="mt-8 pt-4 border-t border-[#DCE4E8] flex justify-between items-center text-xs text-[#6E6E73]">
-                  <span>CSE Undergrad Studies</span>
-                </div>
-              </div>
+                {/* Visual line divider (mobile only) */}
+                <div className="md:hidden w-full h-[1px] bg-[#DCE4E8]" />
 
-              {/* Card 3: UC San Diego */}
-              <div className="group relative rounded-[2rem] bg-white/70 backdrop-blur-md border border-white/50 p-8 shadow-apple hover:shadow-apple-hover transition-all duration-300 flex flex-col justify-between overflow-hidden" id="edu-card-3">
-                <div className="space-y-4">
-                  <div className="flex justify-between items-start">
-                    <span className="text-[10px] uppercase font-semibold font-mono tracking-wider text-[#1D8F4F] bg-emerald-50/80 px-2.5 py-1 rounded-full border border-emerald-100 animate-pulse">
-                      Graduate (Incoming)
-                    </span>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-[#1D1D1F]">UC San Diego</h3>
-                    <p className="text-[#6E6E73] text-xs font-light mt-1">M.S. Computer Science & Engineering (CSE)</p>
-                  </div>
+                {/* Milestone 2 */}
+                <div className="flex-1 space-y-1">
+                  <span className="text-[9px] uppercase font-semibold font-mono tracking-wider text-[#008299] bg-cyan-50/80 px-2 py-0.5 rounded-full border border-cyan-100">
+                    Undergraduate
+                  </span>
+                  <h3 className="text-sm font-bold text-[#1D1D1F] mt-1.5">UC Merced</h3>
+                  <p className="text-[#6E6E73] text-xs font-light">B.S. Computer Science & Engineering (CSE)</p>
                 </div>
-                <div className="mt-8 pt-4 border-t border-[#DCE4E8] flex justify-between items-center text-xs text-[#6E6E73]">
-                  <span>MSCSE Graduate Studies</span>
-                </div>
-              </div>
 
+                {/* Chevron separator (desktop only) */}
+                <div className="hidden md:block text-[#DCE4E8] flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                </div>
+                {/* Visual line divider (mobile only) */}
+                <div className="md:hidden w-full h-[1px] bg-[#DCE4E8]" />
+
+                {/* Milestone 3 */}
+                <div className="flex-1 space-y-1">
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-[9px] uppercase font-semibold font-mono tracking-wider text-[#1D8F4F] bg-emerald-50/80 px-2 py-0.5 rounded-full border border-emerald-100">
+                      Graduate
+                    </span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                  </div>
+                  <h3 className="text-sm font-bold text-[#1D1D1F] mt-1.5">UC San Diego</h3>
+                  <p className="text-[#6E6E73] text-xs font-light">M.S. Computer Science & Engineering (CSE)</p>
+                </div>
+
+              </div>
             </div>
           </section>
 

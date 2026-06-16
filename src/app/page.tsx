@@ -135,7 +135,7 @@ export default function Home() {
       </header>
 
       {/* HERO SECTION (Fully Transparent & Clear Background to let image show through) */}
-      <section className="relative min-h-[85vh] flex items-end z-10 pt-24 pb-20 sm:pb-28" id="hero">
+      <section className="relative min-h-[85vh] flex items-end z-10 pt-24 pb-4 sm:pb-6" id="hero">
         <div className="max-w-6xl mx-auto px-6 w-full">
           
           {/* Floating Frosted Glass Info Box for Text Contrast (Narrower and Shorter) */}
@@ -203,7 +203,7 @@ export default function Home() {
       </section>
 
       {/* TRANSLUCENT SLIDING INFORMATION WINDOW (Slides up over Hero & Background on scroll) */}
-      <div className="relative z-10 bg-white/80 backdrop-blur-xl border-t border-white/60 shadow-2xl rounded-t-[3.5rem] mt-[-5vh]">
+      <div className="relative z-10 bg-white/50 backdrop-blur-xl border-t border-white/40 shadow-2xl rounded-t-[3.5rem] mt-[-5vh]">
         <div className="max-w-6xl mx-auto px-6 py-20 space-y-28 md:space-y-36">
 
           {/* CORE FOCUS GRID SECTION */}

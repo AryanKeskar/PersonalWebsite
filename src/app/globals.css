@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --background: #FBFBFC;
+  --background: #F2F6F8;
   --foreground: #1D1D1F;
 }
 
@@ -12,6 +12,13 @@ body {
   background: var(--background);
   font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   overflow-x: hidden;
+}
+
+/* Water Parallax background */
+.bg-water-parallax {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
 }
 
 /* Custom Scrollbar for light theme */

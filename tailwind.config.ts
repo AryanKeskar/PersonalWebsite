@@ -9,14 +9,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#FBFBFC", // Apple warm off-white
-        bgSecondary: "#F5F5F7", // Apple secondary light gray
+        background: "#F2F6F8", // Aquatic warm off-white
+        bgSecondary: "#EBF1F4", // Soft water blue-gray
         cardBg: "#FFFFFF",
         textMain: "#1D1D1F", // Apple charcoal black
         textMuted: "#6E6E73", // Apple slate gray
-        accentCyan: "#007799", // Deep cyan for contrast
-        accentEmerald: "#1D8F4F", // Forest emerald for contrast
-        borderMuted: "#E5E5E7", // Apple border light gray
+        accentCyan: "#008299", // Deep teal blue
+        accentEmerald: "#1D8F4F", // Forest emerald
+        borderMuted: "#DCE4E8", // Light watery gray border
       },
       fontFamily: {
         sans: ["var(--font-sans)", "ui-sans-serif", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "sans-serif"],
